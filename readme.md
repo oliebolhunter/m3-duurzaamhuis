@@ -1,6 +1,7 @@
-<h1>M3 Bo Duurzaam Huis</h1>
-<h3>Dowen Electronics</h3>
-_Door: Pepijn te Winkel, Jona Wehnes en Samuel Enderink_
+#M3 Duurzaam Huis
+##Dowen Electronics
+_Door: Pepijn te Winkel, Jona Wehnes en Samuel Enderink._
 
-
-Dit is de link van het [Trello Board](https://trello.com/b/XrBcVtU3/m3-bo-duurzaamhuis)
+De Roadmap is tezien op dit [Trello Board](https://trello.com/b/XrBcVtU3/m3-bo-duurzaamhuis)
+> [!IMPORTANT]
+> Dit is een school project.
