@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -17,10 +18,19 @@
         <card class="card" id="js--instellingen">
         </card>
         <card class="card" id="js--uitgavenKWH">
+            <div>            
+                <canvas id="chartKwh"></canvas>
+            </div>
         </card>
         <card class="card" id="js--uitgavenGas">
+            <div>
+                <canvas id="chartGas"></canvas>
+            </div>
         </card>
         <card class="card" id="js--wattNu">
+            <div>
+                <canvas id="chartWatt"></canvas>
+            </div>
         </card>
     </main>
 </body>

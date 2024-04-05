@@ -55,26 +55,29 @@ main{
     grid-row: 4/9;
     grid-column: 1/5;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 #js--uitgavenGas{
     grid-row: 4/9;
     grid-column: 5/9;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 #js--wattNu{
     grid-row: 4/9;
     grid-column: 9/13;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
 }

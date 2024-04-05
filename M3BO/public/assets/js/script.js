@@ -1,27 +1,38 @@
 //varibles
-const chartKwh = document.getElementById('chart--kwh');
+const clock = document.getElementById('clock');
+const chartKwh = document.getElementById('chartKwh').getContext('2d');
+const chartGas = document.getElementById('chartGas').getContext('2d');
+const chartWatt = document.getElementById('chartWatt').getContext('2d');
 
-//load chart file
-let chartScript = document.createElement("script");
-chartScript.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js');
-document.body.appendChild(chartScript);
-//check if file is loaded
-chartScript.addEventListener("load", () => {
-    console.log("File loaded")
-});
-
-chartScript.addEventListener("error", (ev) => {
-    console.log("Error on loading file", ev);
-});
-// cloclfunction
+// clockfunction
 function showTime(){
     let date = new Date();
-    let h = date.getHours(); // 0 - 23
-    let m = date.getMinutes(); // 0 - 59
+    let h = date.getHours();
+    let m = date.getMinutes();
     let time = h + ":" + m;
-    document.getElementById("clock").innerText = time;
-    document.getElementById("clock").textContent = time;
-    setTimeout(showTime, 1000);
+    clock.innerText = time;
+    clock.textContent = time;
+    //ammout of time to refresh is now at 30 seconds
+    setTimeout(showTime, 30000);
 }
-
 showTime();
+
+//Made a chartmaker 
+function chartmaker(chartName,chartUsage,chartData,refreshTime,chartId){
+    let chart = new Chart(chartName,{
+        type:'bar',
+            data:{
+            labels:[chartUsage],
+            datasets:[{data:[chartData]}]
+                 },
+            options:{},
+            id: chartId
+        });
+        setTimeout(chartmaker(chartName,chartUsage,chartData),refreshTime);
+}
+//Calls charts
+//Kwh Chart
+chartmaker(chartKwh,'Stroom verbruik vandaag',50,0);
+//Gas Chart
+chartmaker(chartGas,'Gas verbruik vandaag',57,1);
+chartmaker(chartWatt,'Stroom verbruik vandaag',50,2);
