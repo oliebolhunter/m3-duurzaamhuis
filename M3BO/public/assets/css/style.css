@@ -61,6 +61,46 @@ main{
     font-size: 3rem;
     font-weight: 600;
 }
+#Jaarbutton{
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    border-style: none;
+    cursor: pointer;
+    background-color: white;
+}
+#stroomjaar{
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 1/9;
+    background-color: white;
+    display: none;
+    padding: 4rem;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+#backbutton{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    border-style: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#backbutton:hover{
+    height: 10rem;
+    width: 10rem;
+}
+
+
+#jaarcanvas{
+    background-color: blue;
+    margin-left: 4rem;
+}
+
 #js--uitgavenGas{
     grid-row: 4/9;
     grid-column: 5/9;
