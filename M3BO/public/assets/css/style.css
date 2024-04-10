@@ -23,6 +23,7 @@ main{
     transition: .5s;
     border-radius: 5rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    padding: 4rem;
 }
 #js--weer{
     grid-row: 1/4;
@@ -50,6 +51,14 @@ main{
     align-items: center;
     font-size: 5rem;
     font-weight: 600;
+}
+#settingsDisplay{
+    grid-row: 1/9;
+    grid-column: 1/13;
+    background-color: white;
+    position: relative;
+    
+
 }
 #js--uitgavenKWH{
     grid-row: 4/9;
@@ -80,4 +89,17 @@ main{
     align-items: center;
     font-size: 3rem;
     font-weight: 600;
+}
+#settings-text{
+    font-family: 'Trebuchet MS';
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+#js--slider{
+    appearance: none;
+    padding: 0.2rem;
+    background: linear-gradient(to bottom, rgb(164, 228, 250), rgb(100, 100, 255));
+    border-radius: 10rem;
+    width: 20%;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }

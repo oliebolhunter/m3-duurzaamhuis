@@ -3,6 +3,7 @@ const clock = document.getElementById('clock');
 const chartKwh = document.getElementById('chartKwh').getContext('2d');
 const chartGas = document.getElementById('chartGas').getContext('2d');
 const chartWatt = document.getElementById('chartWatt').getContext('2d');
+const settings = document.getElementById('settings');
 
 // clockfunction
 function showTime(){
@@ -36,3 +37,5 @@ chartmaker(chartKwh,'Stroom verbruik vandaag',50,0);
 //Gas Chart
 chartmaker(chartGas,'Gas verbruik vandaag',57,1);
 chartmaker(chartWatt,'Stroom verbruik vandaag',50,2);
+
+//instwllleingen
