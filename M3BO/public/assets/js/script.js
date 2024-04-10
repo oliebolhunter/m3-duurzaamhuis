@@ -4,6 +4,8 @@ const chartKwh = document.getElementById('chartKwh').getContext('2d');
 const chartGas = document.getElementById('chartGas').getContext('2d');
 const chartWatt = document.getElementById('chartWatt').getContext('2d');
 const settings = document.getElementById('settings');
+const stroomjaar = document.getElementById('stroomjaar');
+
 
 // clockfunction
 function showTime(){
@@ -31,11 +33,19 @@ function chartmaker(chartName,chartUsage,chartData,refreshTime,chartId){
         });
         setTimeout(chartmaker(chartName,chartUsage,chartData),refreshTime);
 }
-//Calls charts
-//Kwh Chart
-chartmaker(chartKwh,'Stroom verbruik vandaag',50,0);
-//Gas Chart
-chartmaker(chartGas,'Gas verbruik vandaag',57,1);
-chartmaker(chartWatt,'Stroom verbruik vandaag',50,2);
+let buttonJaarClick = true;
+const jaarButton = document.getElementById('Jaarbutton');
+jaarButton.onclick = function(){
+   if (buttonJaarClick === true){
+    stroomjaar.style.display = 'flex';
+    buttonJaarClick = false;
+   }
+}
 
-//instwllleingen
+const buttonjaar = document.getElementById('backbutton');
+buttonjaar.onclick = function() {
+    if (buttonJaarClick === false){
+        stroomjaar.style.display = 'none';
+        buttonJaarClick = true;
+    }
+}
