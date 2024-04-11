@@ -7,6 +7,7 @@ const settings = document.getElementById('settings');
 const stroomjaar = document.getElementById('stroomjaar');
 
 
+
 // clockfunction
 function showTime(){
     let date = new Date();
@@ -77,13 +78,22 @@ buttonjaar.onclick = function(){
     } 
 }
 
+let settingsbuttonClick = false
+const instelklick = document.getElementById('js--instellingen')
+instelklick.onclick = function() {
+    if (settingsbuttonClick === true){
+        settingsDisplay.style.display = 'flex';
+        settingsbuttonClick = false;
+       }
+}
+
 const settingscreen = document.getElementById('settingsDisplay');
-let settingsbuttonClick = true
 const back2 = document.getElementById('backbuttoninst');
 back2.onclick = function() {
-    if (settingsbuttonClick === true){
+    if (settingsbuttonClick === false){
         settingsDisplay.style.display = 'none';
-        back2 = false;
-        console.log('klcik');
+        settingsbuttonClick = true;
     }
 }
+
+
