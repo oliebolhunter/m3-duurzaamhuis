@@ -41,12 +41,27 @@ showTime();
                 label: 'Gas',
                 data:[1884],}]
                  },
-            options:{},
-            id: chartId
+            options:{
+                responsive: true,
+                maintainAspectRatio: false
+            },
         });
-        
+        let chart3 = new Chart(chartWatt,{
+            type:'bar',
+                data:{
+                labels:['Gas verbruik Vandaag'],
+                datasets:[{
+                    label: 'Gas',
+                    data:[1884],}]
+                     },
+                options:{
+                    responsive: true,
+                    maintainAspectRatio: false
+                },
+            });
+
 let buttonJaarClick = true;
-const jaarButton = document.getElementById('Jaarbutton');
+const jaarButton = document.getElementById('js--uitgavenKWH');
 jaarButton.onclick = function(){
    if (buttonJaarClick === true){
     stroomjaar.style.display = 'flex';
