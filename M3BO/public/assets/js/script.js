@@ -3,6 +3,9 @@ const clock = document.getElementById('clock');
 const chartKwh = document.getElementById('chartKwh').getContext('2d');
 const chartGas = document.getElementById('chartGas').getContext('2d');
 const chartWatt = document.getElementById('chartWatt').getContext('2d');
+const settings = document.getElementById('settings');
+const stroomjaar = document.getElementById('stroomjaar');
+
 
 // clockfunction
 function showTime(){
@@ -38,24 +41,23 @@ showTime();
                 label: 'Gas',
                 data:[1884],}]
                  },
-            options:{
-                responsive: true,
-                maintainAspectRatio: false
-                
-            },
+            options:{},
+            id: chartId
         });
-        let chart3 = new Chart(chartWatt,{
-            type:'bar',
-                data:{
-                labels:['Watt gebruik Nu'],
-                datasets:[{
-                    label: 'Watt',
-                    data:[189],
-                }]
-                     },
-                     options: {
-                        responsive: true,
-                        maintainAspectRatio: false
+        
+let buttonJaarClick = true;
+const jaarButton = document.getElementById('Jaarbutton');
+jaarButton.onclick = function(){
+   if (buttonJaarClick === true){
+    stroomjaar.style.display = 'flex';
+    buttonJaarClick = false;
+   }
+}
 
-                    },
-            });
+const buttonjaar = document.getElementById('backbutton');
+buttonjaar.onclick = function() {
+    if (buttonJaarClick === false){
+        stroomjaar.style.display = 'none';
+        buttonJaarClick = true;
+    }
+}

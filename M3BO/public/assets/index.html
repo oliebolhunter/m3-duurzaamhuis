@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,25 @@
 </head>
 <body>
     <main>
+
+        <card class="card" id="settingsDisplay">
+            <p id="settings-text">hold on</p>
+            <input id="js--slider" type="range">
+            <output id="js-sliderOutput" for="js--slider"></output>
+            <p id="settings-text">waidaminnute</p>
+            <input id="js--slider" type="range">
+            <output id="js-sliderOutput" for="js--slider"></output>
+            <p id="settings-text"><input type="checkbox">dark mode</p>
+
+        </card>
+        <card class="card" id="js--weer">
+
+        <card id="stroomjaar">
+            <button id="backbutton">Back</button>
+            <canvas id="jaarcanvas"></canvas>
+        </card>
         <card class="card" id="js--weer">   
+
         </card>
         <card class="card" id="js--tijd">
             <div id="clock" onload="showtime()"></div>
@@ -18,9 +37,11 @@
         <card class="card" id="js--instellingen">
         </card>
         <card class="card" id="js--uitgavenKWH">
-            <div class="canvasContainer">            
-                <canvas class="canvas" id="chartKwh"></canvas>
+            <div>            
+                <canvas id="chartKwh"></canvas>
             </div>
+        </button>
+
         </card>
         <card class="card" id="js--uitgavenGas">
             <div class="canvasContainer">
