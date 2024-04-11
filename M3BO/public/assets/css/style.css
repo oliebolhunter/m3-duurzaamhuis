@@ -24,6 +24,15 @@ main{
     border-radius: 5rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
+.canvasContainer{
+    height: 40rem;
+    width: 50rem;
+}
+.canvas{
+    width:100%;
+    height:100%;
+}
+
 #js--weer{
     grid-row: 1/4;
     grid-column: 1/9;

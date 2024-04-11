@@ -17,22 +17,45 @@ function showTime(){
 }
 showTime();
 
-//Made a chartmaker 
-function chartmaker(chartName,chartUsage,chartData,refreshTime,chartId){
-    let chart = new Chart(chartName,{
+    let chart = new Chart(chartKwh,{
         type:'bar',
             data:{
-            labels:[chartUsage],
-            datasets:[{data:[chartData]}]
+            labels:['Stroom verbruik Vandaag'],
+            datasets:[{
+                label: 'Stroom',
+                data:[1884],}]
                  },
-            options:{},
-            id: chartId
+            options:{
+                responsive: true,
+                maintainAspectRatio: false
+            },
         });
-        setTimeout(chartmaker(chartName,chartUsage,chartData),refreshTime);
-}
-//Calls charts
-//Kwh Chart
-chartmaker(chartKwh,'Stroom verbruik vandaag',50,0);
-//Gas Chart
-chartmaker(chartGas,'Gas verbruik vandaag',57,1);
-chartmaker(chartWatt,'Stroom verbruik vandaag',50,2);
+    let chart2 = new Chart(chartGas,{
+        type:'bar',
+            data:{
+            labels:['Gas verbruik Vandaag'],
+            datasets:[{
+                label: 'Gas',
+                data:[1884],}]
+                 },
+            options:{
+                responsive: true,
+                maintainAspectRatio: false
+                
+            },
+        });
+        let chart3 = new Chart(chartWatt,{
+            type:'bar',
+                data:{
+                labels:['Watt gebruik Nu'],
+                datasets:[{
+                    label: 'Watt',
+                    data:[189],
+                }]
+                     },
+                     options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+
+                    },
+            });
