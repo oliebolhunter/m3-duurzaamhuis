@@ -12,18 +12,19 @@
 <body>
     <main>
 
-        <card class="card" id="settingsDisplay">
-            <p id="settings-text">hold on</p>
-            <input id="js--slider" type="range">
-            <output id="js-sliderOutput" for="js--slider"></output>
-            <p id="settings-text">waidaminnute</p>
-            <input id="js--slider" type="range">
-            <output id="js-sliderOutput" for="js--slider"></output>
-            <p id="settings-text"><input type="checkbox">dark mode</p>
-
+        <card class="menuBig" id="settingsDisplay">
+            <button id="backbuttoninst">Back</button>
+            <p class="settings-text">hold on</p>
+            <input class="js--slider" type="range">
+            <output class="js-sliderOutput" for="js--slider"></output>
+            <p class="settings-text">waidaminnute</p>
+            <input class="js--slider" type="range">
+            <output class="js-sliderOutput" for="js--slider"></output>
+            <p class="settings-text"><input type="checkbox">dark mode</p>
+            
         </card>
 
-        <card id="stroomjaar">
+        <card class="menuBig"id="stroomjaar">
             <button id="backbutton">Back</button>
             <canvas id="jaarcanvas"></canvas>
         </card>
@@ -34,6 +35,7 @@
             <div id="clock" onload="showtime()"></div>
         </card>
         <card class="card" id="js--instellingen">
+            
         </card>
         <card class="card" id="js--uitgavenKWH">
             <div>            

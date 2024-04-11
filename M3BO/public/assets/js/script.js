@@ -55,9 +55,20 @@ jaarButton.onclick = function(){
 }
 
 const buttonjaar = document.getElementById('backbutton');
-buttonjaar.onclick = function() {
+buttonjaar.onclick = function(){
     if (buttonJaarClick === false){
         stroomjaar.style.display = 'none';
         buttonJaarClick = true;
+    } 
+}
+
+const settingscreen = document.getElementById('settingsDisplay');
+let settingsbuttonClick = true
+const back2 = document.getElementById('backbuttoninst');
+back2.onclick = function() {
+    if (settingsbuttonClick === true){
+        settingsDisplay.style.display = 'none';
+        back2 = false;
+        console.log('klcik');
     }
 }
