@@ -91,7 +91,7 @@ main{
     cursor: pointer;
     background-color: white;
 }
-#stroomjaar{
+.menuBig{
     position: relative;
     grid-column: 1/13;
     grid-row: 1/9;
