@@ -12,7 +12,7 @@
 <body>
     <main>
         <card class="menuBig" id="settingsDisplay">
-            <button id="backbuttoninst">Back</button>
+            <button class="backButtons" id="backbuttoninst">‹</button>
             <div class="settingCard">
                 <p class="settings-text">hold on</p>
                 <input class="js--slider" type="range">
@@ -32,28 +32,28 @@
             <div id="clock" onload="showtime()"></div>
         </card>
         <card class="card" id="js--instellingen">
+            <img src="images/setttings.png" alt="">
         </card>
 
 
         <card class="card" id="js--uitgavenKWH">
-            <div>            
+            <div class="canvasContainer">            
                 <canvas id="chartKwh"></canvas>
             </div>
         </card>
-        <card class="menuBig"id="stroomjaar">
-            <button id="backbutton">Back</button>
-            <canvas id="jaarcanvas"></canvas>
+        <card class="jaarMenus" id="stroom-JaarMenu">
+            <button class="backButtons" id="backbutton"><</button>
+            <canvas class="jaarCanvases" id="jaarcanvas"></canvas>
         </card>
-
 
         <card class="card" id="js--uitgavenGas">
             <div class="canvasContainer">
                 <canvas class="canvas" id="chartGas"></canvas>
             </div>
         </card>
-        <card class="menuBig"id="gasjaar">
-            <button id="backbutton">Back</button>
-            <canvas id="jaarcanvas"></canvas>
+        <card class="jaarMenus" id="gas-jaarMenu">
+            <button class="backButtons" id="gas-BackButton"><</button>
+            <canvas class="jaarCanvases" id="gas-jaarCanvas"></canvas>
         </card>
 
         <card class="card" id="js--wattNu">
@@ -62,9 +62,9 @@
             </div>
         </card>
 
-        <card class="menuBig"id="wattjaar">
-            <button id="backbutton">Back</button>
-            <canvas id="jaarcanvas"></canvas>
+        <card class="jaarMenus"id="watt-jaarMenu">
+            <button class="backButtons" id="watt-backButton"><</button>
+            <canvas class="jaarCanvases" id="watt-jaarCanvas"></canvas>
         </card>
     </main>
 </body>

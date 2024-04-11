@@ -4,7 +4,9 @@ const chartKwh = document.getElementById('chartKwh').getContext('2d');
 const chartGas = document.getElementById('chartGas').getContext('2d');
 const chartWatt = document.getElementById('chartWatt').getContext('2d');
 const settings = document.getElementById('settings');
-const stroomjaar = document.getElementById('stroomjaar');
+const stroomJaarMenu = document.getElementById('stroom-JaarMenu');
+const gasJaarMenu = document.getElementById('gas-jaarMenu');
+const wattJaarMenu = document.getElementById('watt-jaarMenu');
 
 
 
@@ -61,22 +63,64 @@ showTime();
                 },
             });
 
-let buttonJaarClick = true;
-const jaarButton = document.getElementById('js--uitgavenKWH');
-jaarButton.onclick = function(){
-   if (buttonJaarClick === true){
-    stroomjaar.style.display = 'flex';
-    buttonJaarClick = false;
+
+//expenses power yearly menu  
+let kwhJaarClick = true;
+const kwhJaarButton = document.getElementById('js--uitgavenKWH');
+kwhJaarButton.onclick = function(){
+   if (kwhJaarClick === true){
+    stroomJaarMenu.style.display = 'flex';
+    kwhJaarClick = false;
+   }
+}
+//backbutton power yearly menu  
+const kwhBackButton = document.getElementById('backbutton');
+kwhBackButton.onclick = function(){
+    if (kwhJaarClick === false){
+        stroomJaarMenu.style.display = 'none';
+        kwhJaarClick = true;
+    } 
+}
+//expenses gas yearly menu  
+let gasJaarClick = true;
+const gasJaarButton = document.getElementById('js--uitgavenGas');
+gasJaarButton.onclick = function(){
+   if (gasJaarClick === true){
+    gasJaarMenu.style.display = 'flex';
+    gasJaarClick = false;
    }
 }
 
-const buttonjaar = document.getElementById('backbutton');
-buttonjaar.onclick = function(){
-    if (buttonJaarClick === false){
-        stroomjaar.style.display = 'none';
-        buttonJaarClick = true;
+//backbutton gas yearly menu  
+const gasBackButton = document.getElementById('gas-BackButton');
+gasBackButton.onclick = function(){
+    if (gasJaarClick === false){
+        gasJaarMenu.style.display = 'none';
+        gasJaarClick = true;
     } 
 }
+
+//expenses wattage yearly menu  
+let wattJaarClick = true;
+const wattJaarButton = document.getElementById('js--wattNu');
+wattJaarButton.onclick = function(){
+   if (wattJaarClick === true){
+    wattJaarMenu.style.display = 'flex';
+    wattJaarClick = false;
+   }
+}
+
+//backbutton wattage yearly menu  
+const wattBackButton = document.getElementById('watt-backButton');
+wattBackButton.onclick = function(){
+    if (wattJaarClick === false){
+        wattJaarMenu.style.display = 'none';
+        wattJaarClick = true;
+    } 
+}
+
+
+
 
 let settingsbuttonClick = false
 const instelklick = document.getElementById('js--instellingen')
@@ -86,6 +130,9 @@ instelklick.onclick = function() {
         settingsbuttonClick = false;
        }
 }
+
+
+
 
 const settingscreen = document.getElementById('settingsDisplay');
 const back2 = document.getElementById('backbuttoninst');
