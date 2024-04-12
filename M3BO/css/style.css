@@ -1,0 +1,165 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Roboto Mono", monospace;
+}
+main{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 13;
+    grid-template-rows: 9; 
+    gap: 4rem;
+    padding: 4rem;
+}
+.card{
+    transition: .5s;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    padding: 4rem;
+}
+.canvasContainer{
+    height: 40rem;
+    width: 50rem;
+}
+.canvas{
+    width:100%;
+    height:100%;
+}
+
+#js--weer{
+    grid-row: 1/4;
+    grid-column: 1/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 600;
+}
+#js--tijd{
+    grid-row: 1/4;
+    grid-column: 9/11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 600;
+}
+#js--instellingen{
+    grid-row: 1/4;
+    grid-column: 11/13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#js--instellingen > img{
+    width: 10rem;
+    height: 10rem;
+}
+
+#settingsDisplay{
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 1/9;
+    background-color: white;
+    padding: 4rem;
+    border-radius: 5rem;
+    display: none;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2); 
+}
+#js--uitgavenKWH{
+    grid-row: 4/9;
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+#Jaarbutton{
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    border-style: none;
+    cursor: pointer;
+    background-color: white;
+}
+.jaarMenus{
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 1/9;
+    background-color: white;
+    display: none;
+    padding: 4rem;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.backButtons{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    border-style: none;
+    font-size: 5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.backButtons:hover{
+    height: 10rem;
+    width: 10rem;
+}
+
+.jaarCanvases{
+    background-color: blue;
+    margin-left: 4rem;
+}
+
+#js--uitgavenGas{
+    grid-row: 4/9;
+    grid-column: 5/9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+#js--wattNu{
+    grid-row: 4/9;
+    grid-column: 9/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#settings-text{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+#js--slider{
+    appearance: none;
+    padding: 0.2rem;
+    background: linear-gradient(to bottom, rgb(164, 228, 250), rgb(100, 100, 255));
+    border-radius: 10rem;
+    width: 30rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+}
