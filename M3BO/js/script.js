@@ -1,3 +1,4 @@
+
 //varibles
 const clock = document.getElementById('clock');
 const chartKwh = document.getElementById('chartKwh').getContext('2d');
@@ -142,5 +143,3 @@ back2.onclick = function() {
         settingsbuttonClick = true;
     }
 }
-
-
