@@ -74,7 +74,14 @@ main{
     padding: 4rem;
     border-radius: 5rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    display: none;
 }
+
+.settingsSettings{
+    padding-left: 10rem;
+    font-size: 3rem;
+}
+
 #js--uitgavenKWH{
     grid-row: 4/9;
     grid-column: 1/5;
@@ -155,11 +162,12 @@ main{
     font-size: 2rem;
     padding-top: 2rem;
 }
-#js--slider{
+
+
+.js--slider{
     appearance: none;
     padding: 0.2rem;
-    background: linear-gradient(to bottom, rgb(164, 228, 250), rgb(100, 100, 255));
+    background-color: whitesmoke;
     border-radius: 10rem;
-    width: 30rem;
-    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    width: 40rem;
 }
