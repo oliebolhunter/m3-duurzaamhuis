@@ -25,6 +25,15 @@ main{
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
     padding: 4rem;
 }
+.canvasContainer{
+    height: 40rem;
+    width: 50rem;
+}
+.canvas{
+    width:100%;
+    height:100%;
+}
+
 #js--weer{
     grid-row: 1/4;
     grid-column: 1/9;
@@ -49,16 +58,21 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
-    font-weight: 600;
+    cursor: pointer;
 }
-#settingsDisplay{
-    grid-row: 1/9;
-    grid-column: 1/13;
-    background-color: white;
-    position: relative;
-    
+#js--instellingen > img{
+    width: 10rem;
+    height: 10rem;
+}
 
+#settingsDisplay{
+    position: relative;
+    grid-column: 1/13;
+    grid-row: 1/9;
+    background-color: white;
+    padding: 4rem;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2); 
 }
 #js--uitgavenKWH{
     grid-row: 4/9;
@@ -69,6 +83,7 @@ main{
     align-items: center;
     font-size: 3rem;
     font-weight: 600;
+    cursor: pointer;
 }
 #Jaarbutton{
     width: 100%;
@@ -78,7 +93,7 @@ main{
     cursor: pointer;
     background-color: white;
 }
-#stroomjaar{
+.jaarMenus{
     position: relative;
     grid-column: 1/13;
     grid-row: 1/9;
@@ -89,23 +104,24 @@ main{
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
 
-#backbutton{
+.backButtons{
     height: 9rem;
     width: 9rem;
     border-radius: 1rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
     border-style: none;
+    font-size: 5rem;
+    font-weight: 500;
     cursor: pointer;
     transition: .5s;
 }
 
-#backbutton:hover{
+.backButtons:hover{
     height: 10rem;
     width: 10rem;
 }
 
-
-#jaarcanvas{
+.jaarCanvases{
     background-color: blue;
     margin-left: 4rem;
 }
@@ -119,6 +135,7 @@ main{
     align-items: center;
     font-size: 3rem;
     font-weight: 600;
+    cursor: pointer;
 }
 #js--wattNu{
     grid-row: 4/9;
@@ -132,7 +149,6 @@ main{
 }
 
 #settings-text{
-    font-family: 'Trebuchet MS';
     font-size: 2rem;
     padding-top: 2rem;
 }
@@ -141,6 +157,6 @@ main{
     padding: 0.2rem;
     background: linear-gradient(to bottom, rgb(164, 228, 250), rgb(100, 100, 255));
     border-radius: 10rem;
-    width: 20%;
+    width: 30rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
