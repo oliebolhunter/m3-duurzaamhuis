@@ -72,7 +72,7 @@ main{
     background-color: white;
     padding: 4rem;
     border-radius: 5rem;
-    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
 #js--uitgavenKWH{
     grid-row: 4/9;
@@ -103,6 +103,8 @@ main{
     border-radius: 5rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
+
+
 
 .backButtons{
     height: 9rem;
