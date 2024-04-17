@@ -7,6 +7,8 @@ const settings = document.getElementById('settings');
 const stroomJaarMenu = document.getElementById('stroom-JaarMenu');
 const gasJaarMenu = document.getElementById('gas-jaarMenu');
 const wattJaarMenu = document.getElementById('watt-jaarMenu');
+const jaarcanvas = document.getElementById('jaarcanvas');
+const gasjaarCanvas = document.getElementById('gas-jaarCanvas');
 
 
 
@@ -67,6 +69,27 @@ function checkTime(i) {
             });
 
 
+            let chart4 = new Chart(jaarcanvas,{
+                type:'bar',
+                    data: {
+                        labels: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"],
+                        datasets:[{
+                            label: 'KWH',
+                            data:[3247,1879,4502,2756,3910,1034,4987,2198,3671,1423,489,2685],}]
+                    },
+                });
+
+                let chart5 = new Chart(gasjaarCanvas,{
+                    type:'bar',
+                        data: {
+                            labels: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"],
+                            datasets:[{
+                                label: 'kubieke meter',
+                                data:[1456,2730,301,1789,1245,2874,572,2063,1048,2997,1321,891],}]
+                        },
+                    });
+
+
 //expenses power yearly menu  
 let kwhJaarClick = true;
 const kwhJaarButton = document.getElementById('js--uitgavenKWH');
@@ -103,15 +126,7 @@ gasBackButton.onclick = function(){
     } 
 }
 
-//expenses wattage yearly menu  
-let wattJaarClick = true;
-const wattJaarButton = document.getElementById('js--wattNu');
-wattJaarButton.onclick = function(){
-   if (wattJaarClick === true){
-    wattJaarMenu.style.display = 'flex';
-    wattJaarClick = false;
-   }
-}
+
 
 //backbutton wattage yearly menu  
 const wattBackButton = document.getElementById('watt-backButton');

@@ -120,10 +120,11 @@ main{
     border-radius: 1rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
     border-style: none;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 500;
     cursor: pointer;
     transition: .5s;
+    color: black;
 }
 
 .backButtons:hover{
@@ -132,7 +133,6 @@ main{
 }
 
 .jaarCanvases{
-    background-color: blue;
     margin-left: 4rem;
 }
 
