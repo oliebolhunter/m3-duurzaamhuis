@@ -169,21 +169,24 @@ back2.onclick = function() {
     }
 }
 
-const weer = document.getElementById('js--weer');
+const weer = document.getElementById("js--weer");
 fetch("https://api.weatherapi.com/v1/forecast.json?key=831aac22332149b38ed114733241804&q=Amsterdam&days=7&aqi=no&alerts=no&lang=nl")
 .then(function(response){
     return response.json();
 })
 .then(function(realData){
     for (const { date, day } of realData.forecast.forecastday) {
-        const div = document.createElement('div');
-        const img = document.createElement('img');
+        const div = document.createElement("div");
+        div.className = "weather-card";
+        weer.appendChild(div);
+
+        const img = document.createElement("img");
         img.src = day.condition.icon;
         div.appendChild(img);
-        const p = document.createElement('p');
-        // p.innerText = day.avgtemp_c;
-        console.log(day.avgtemp_c);
+    
+        const p = document.createElement("p");
+        p.className = "weather-temp";
+        p.innerText = date + "\n\nMin: " + day.mintemp_c + " °C\nMax: " + day.maxtemp_c + " °C";
         div.appendChild(p);
-        weer.appendChild(div);
     }
 });
