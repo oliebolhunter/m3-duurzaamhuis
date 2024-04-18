@@ -63,8 +63,9 @@ function checkTime(i) {
                 maintainAspectRatio: false,
                 scales: {
                     y: {
+                        max: 10,
                         ticks: {
-                            max: 10,
+                            
                             stepSize: 2
                         }
                     }
@@ -84,8 +85,9 @@ function checkTime(i) {
                     maintainAspectRatio: false,
                     scales: {
                         y: {
+                            max: 2.0,
                             ticks: {
-                                max: 2.0,
+                                
                                 stepSize: 0.5
                             }
                         }
