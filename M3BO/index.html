@@ -1,24 +1,25 @@
-
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script src="js/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard</title>
 </head>
-<body>
+<body onload="startTime()">
     <main>
         <card class="menuBig" id="settingsDisplay">
-            <button class="backButtons" id="backbuttoninst">‹</button>
+            <button class="backButtons" id="backbuttoninst">back</button>
             <div class="settingsSettings">
-                <p class="settings-text">hold on</p>
+                <p class="settings-text">NULL</p>
                 <input class="js--slider" type="range">
                 <output class="js-sliderOutput" for="js--slider"></output>
-                <p class="settings-text">waidaminnute</p>
+                <p class="settings-text">NULL</p>
                 <input class="js--slider" type="range">
                 <output class="js-sliderOutput" for="js--slider"></output>
                 <p class="settings-text"><input type="checkbox">dark mode</p>
@@ -42,7 +43,7 @@
             </div>
         </card>
         <card class="jaarMenus" id="stroom-JaarMenu">
-            <button class="backButtons" id="backbutton"></button>
+            <button class="backButtons" id="backbutton">Back</button>
             <canvas class="jaarCanvases" id="jaarcanvas"></canvas>
         </card>
 
@@ -52,7 +53,7 @@
             </div>
         </card>
         <card class="jaarMenus" id="gas-jaarMenu">
-            <button class="backButtons" id="gas-BackButton"><</button>
+            <button class="backButtons" id="gas-BackButton">Back</button>
             <canvas class="jaarCanvases" id="gas-jaarCanvas"></canvas>
         </card>
 
@@ -63,7 +64,7 @@
         </card>
 
         <card class="jaarMenus"id="watt-jaarMenu">
-            <button class="backButtons" id="watt-backButton"><</button>
+            <button class="backButtons" id="watt-backButton">Back</button>
             <canvas class="jaarCanvases" id="watt-jaarCanvas"></canvas>
         </card>
     </main>

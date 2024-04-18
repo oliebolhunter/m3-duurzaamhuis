@@ -1,6 +1,5 @@
 
 //varibles
-const clock = document.getElementById('clock');
 const chartKwh = document.getElementById('chartKwh').getContext('2d');
 const chartGas = document.getElementById('chartGas').getContext('2d');
 const chartWatt = document.getElementById('chartWatt').getContext('2d');
@@ -8,21 +7,26 @@ const settings = document.getElementById('settings');
 const stroomJaarMenu = document.getElementById('stroom-JaarMenu');
 const gasJaarMenu = document.getElementById('gas-jaarMenu');
 const wattJaarMenu = document.getElementById('watt-jaarMenu');
+const jaarcanvas = document.getElementById('jaarcanvas');
+const gasjaarCanvas = document.getElementById('gas-jaarCanvas');
 
 
 
 // clockfunction
-function showTime(){
-    let date = new Date();
-    let h = date.getHours();
-    let m = date.getMinutes();
-    let time = h + ":" + m;
-    clock.innerText = time;
-    clock.textContent = time;
-    //ammout of time to refresh is now at 30 seconds
-    setTimeout(showTime, 30000);
-}
-showTime();
+function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
 
     let chart = new Chart(chartKwh,{
         type:'bar',
@@ -53,9 +57,9 @@ showTime();
         let chart3 = new Chart(chartWatt,{
             type:'bar',
                 data:{
-                labels:['Gas verbruik Vandaag'],
+                labels:['Watt verbruik Nu'],
                 datasets:[{
-                    label: 'Gas',
+                    label: 'Watt',
                     data:[1884],}]
                      },
                 options:{
@@ -63,6 +67,27 @@ showTime();
                     maintainAspectRatio: false
                 },
             });
+
+
+            let chart4 = new Chart(jaarcanvas,{
+                type:'bar',
+                    data: {
+                        labels: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"],
+                        datasets:[{
+                            label: 'KWH',
+                            data:[3247,1879,4502,2756,3910,1034,4987,2198,3671,1423,489,2685],}]
+                    },
+                });
+
+                let chart5 = new Chart(gasjaarCanvas,{
+                    type:'bar',
+                        data: {
+                            labels: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"],
+                            datasets:[{
+                                label: 'kubieke meter',
+                                data:[1456,2730,301,1789,1245,2874,572,2063,1048,2997,1321,891],}]
+                        },
+                    });
 
 
 //expenses power yearly menu  
@@ -123,9 +148,9 @@ wattBackButton.onclick = function(){
 
 
 
-let settingsbuttonClick = true;
-const instelClick = document.getElementById('js--instellingen')
-instelClick.onclick = function() {
+let settingsbuttonClick = true
+const instelklick = document.getElementById('js--instellingen')
+instelklick.onclick = function() {
     if (settingsbuttonClick === true){
         settingsDisplay.style.display = 'flex';
         settingsbuttonClick = false;
