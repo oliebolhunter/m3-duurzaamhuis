@@ -9,6 +9,8 @@ const gasJaarMenu = document.getElementById('gas-jaarMenu');
 const wattJaarMenu = document.getElementById('watt-jaarMenu');
 const jaarcanvas = document.getElementById('jaarcanvas');
 const gasjaarCanvas = document.getElementById('gas-jaarCanvas');
+const wattJaarButton = document.getElementById('js--wattNu');
+const wattJaar = document.getElementById('watt-jaarCanvas');
 
 
 
@@ -34,11 +36,19 @@ function checkTime(i) {
             labels:['Stroom verbruik Vandaag'],
             datasets:[{
                 label: 'Stroom',
-                data:[1884],}]
+                data:[7.4],}]
                  },
             options:{
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        max: 10,
+                        ticks: {
+                            stepSize: 2
+                        }
+                    }
+                }
             },
         });
     let chart2 = new Chart(chartGas,{
@@ -47,11 +57,20 @@ function checkTime(i) {
             labels:['Gas verbruik Vandaag'],
             datasets:[{
                 label: 'Gas',
-                data:[1884],}]
+                data:[4.1],}]
                  },
+                 
             options:{
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        ticks: {
+                            max: 10,
+                            stepSize: 2
+                        }
+                    }
+                }
             },
         });
         let chart3 = new Chart(chartWatt,{
@@ -60,11 +79,19 @@ function checkTime(i) {
                 labels:['Watt verbruik Nu'],
                 datasets:[{
                     label: 'Watt',
-                    data:[1884],}]
+                    data:[0.2],}]
                      },
                 options:{
                     responsive: true,
-                    maintainAspectRatio: false
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            ticks: {
+                                max: 2.0,
+                                stepSize: 0.5
+                            }
+                        }
+                    }
                 },
             });
 
@@ -88,6 +115,17 @@ function checkTime(i) {
                                 data:[1456,2730,301,1789,1245,2874,572,2063,1048,2997,1321,891],}]
                         },
                     });
+
+                let chart6 = new Chart(wattJaar,{
+                    type:'bar',
+                        data: {
+                            labels: ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"],
+                            datasets:[{
+                                label: 'KWH',
+                                data:[5.2, 9.6, 3.5, 7.2, 8.3, 4.9, 8.8 ],}]
+                        },
+                    });
+
 
 
 //expenses power yearly menu  
@@ -124,6 +162,15 @@ gasBackButton.onclick = function(){
         gasJaarMenu.style.display = 'none';
         gasJaarClick = true;
     } 
+}
+
+//expenses wattage yearly menu  
+let wattJaarClick = true;
+wattJaarButton.onclick = function(){
+   if (wattJaarClick === true){
+    wattJaarMenu.style.display = 'flex';
+    wattJaarClick = false;
+   }
 }
 
 
