@@ -101,7 +101,7 @@ gasBackButton.onclick = function(){
     } 
 }
 
-//expenses wattage yearly menu  
+//expenses wattage yearly menu
 let wattJaarClick = true;
 const wattJaarButton = document.getElementById('js--wattNu');
 wattJaarButton.onclick = function(){
@@ -123,9 +123,9 @@ wattBackButton.onclick = function(){
 
 
 
-let settingsbuttonClick = false
-const instelklick = document.getElementById('js--instellingen')
-instelklick.onclick = function() {
+let settingsbuttonClick = true;
+const instelClick = document.getElementById('js--instellingen')
+instelClick.onclick = function() {
     if (settingsbuttonClick === true){
         settingsDisplay.style.display = 'flex';
         settingsbuttonClick = false;
