@@ -174,7 +174,6 @@ let daysArray = [];
 let weatherapi = fetch("https://api.weatherapi.com/v1/forecast.json?key=831aac22332149b38ed114733241804&q=Amsterdam&days=7&aqi=no&alerts=no")
 .then(function(response){
     return response.json();
-    
 })
 .then(function(realData){
     for (const { day } of realData.forecast.forecastday) {
