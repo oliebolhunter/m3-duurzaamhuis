@@ -116,8 +116,36 @@ main{
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
 
+#js--weer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 
+}
+#js--weer:hover{
+    background-color: rgb(243, 243, 243);
 
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 0 2rem 0.05rem gray;
+    transition: .5s;
+    height: 100%;
+}
+.weather-card:hover{
+    background-color: white;
+}
+
+.weather-temp {
+    font-size: 2rem;
+}
 .backButtons{
     height: 9rem;
     width: 9rem;
@@ -168,7 +196,6 @@ main{
     padding-top: 2rem;
 }
 
-
 .js--slider{
     appearance: none;
     padding: 0.2rem;
@@ -176,3 +203,4 @@ main{
     border-radius: 10rem;
     width: 40rem;
 }
+

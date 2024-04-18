@@ -12,8 +12,6 @@ const gasjaarCanvas = document.getElementById('gas-jaarCanvas');
 const wattJaarButton = document.getElementById('js--wattNu');
 const wattJaar = document.getElementById('watt-jaarCanvas');
 
-
-
 // clockfunction
 function startTime() {
     const today = new Date();
@@ -163,7 +161,6 @@ gasBackButton.onclick = function(){
         gasJaarClick = true;
     } 
 }
-
 //expenses wattage yearly menu  
 let wattJaarClick = true;
 wattJaarButton.onclick = function(){
@@ -207,3 +204,25 @@ back2.onclick = function() {
         settingsbuttonClick = true;
     }
 }
+
+const weer = document.getElementById("js--weer");
+fetch("https://api.weatherapi.com/v1/forecast.json?key=831aac22332149b38ed114733241804&q=Amsterdam&days=7&aqi=no&alerts=no&lang=nl")
+.then(function(response){
+    return response.json();
+})
+.then(function(realData){
+    for (const { date, day } of realData.forecast.forecastday) {
+        const div = document.createElement("div");
+        div.className = "weather-card";
+        weer.appendChild(div);
+
+        const img = document.createElement("img");
+        img.src = day.condition.icon;
+        div.appendChild(img);
+    
+        const p = document.createElement("p");
+        p.className = "weather-temp";
+        p.innerText = date + "\n\nMin: " + day.mintemp_c + " °C\nMax: " + day.maxtemp_c + " °C";
+        div.appendChild(p);
+    }
+});
