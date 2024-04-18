@@ -169,20 +169,21 @@ back2.onclick = function() {
     }
 }
 
-let daysArray = [];
-
-let weatherapi = fetch("https://api.weatherapi.com/v1/forecast.json?key=831aac22332149b38ed114733241804&q=Amsterdam&days=7&aqi=no&alerts=no")
+const weer = document.getElementById('js--weer');
+fetch("https://api.weatherapi.com/v1/forecast.json?key=831aac22332149b38ed114733241804&q=Amsterdam&days=7&aqi=no&alerts=no&lang=nl")
 .then(function(response){
     return response.json();
 })
 .then(function(realData){
-    for (const { day } of realData.forecast.forecastday) {
-        daysArray.push(day.maxtemp_c);
+    for (const { date, day } of realData.forecast.forecastday) {
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+        img.src = day.condition.icon;
+        div.appendChild(img);
+        const p = document.createElement('p');
+        // p.innerText = day.avgtemp_c;
+        console.log(day.avgtemp_c);
+        div.appendChild(p);
+        weer.appendChild(div);
     }
-    console.log(daysArray);
 });
-
-//for (let i = 0; i < 6; i++) {
-//    daysArray.push = realData.object.forecast.forecastday.i.day.maxtemp_c;
-//    console.log(daysArray);
-//}
