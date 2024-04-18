@@ -168,3 +168,22 @@ back2.onclick = function() {
         settingsbuttonClick = true;
     }
 }
+
+let daysArray = [];
+
+let weatherapi = fetch("https://api.weatherapi.com/v1/forecast.json?key=831aac22332149b38ed114733241804&q=Amsterdam&days=7&aqi=no&alerts=no")
+.then(function(response){
+    return response.json();
+    
+})
+.then(function(realData){
+    for (const { day } of realData.forecast.forecastday) {
+        daysArray.push(day.maxtemp_c);
+    }
+    console.log(daysArray);
+});
+
+//for (let i = 0; i < 6; i++) {
+//    daysArray.push = realData.object.forecast.forecastday.i.day.maxtemp_c;
+//    console.log(daysArray);
+//}
