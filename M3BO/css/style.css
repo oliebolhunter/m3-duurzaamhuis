@@ -25,6 +25,10 @@ main{
     border-radius: 5rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
     padding: 4rem;
+    background-color: rgb(243, 243, 243);
+}
+.card:hover{
+    background-color: white;
 }
 .canvasContainer{
     height: 40rem;
